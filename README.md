@@ -19,8 +19,8 @@ Edit your Neo4j/conf/neo4j.conf file by adding this line:
 
     dbms.security.procedures.unrestricted=com.maxdemarzi.*
 
-Import from CSV file:
+Run the procedure:
 
-    CALL com.jnj.distinct_network_to_file_mt(threads, file);
+    CALL com.maxdemarzi.distinct_network_to_file_mt(max_threads, file);
     
-    CALL com.jnj.distinct_network_to_file_mt(8, 'myoutput.csv')
+    CALL com.maxdemarzi.distinct_network_to_file_mt(8, 'myoutput.csv')
