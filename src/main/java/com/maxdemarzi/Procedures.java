@@ -53,7 +53,7 @@ public class Procedures {
     private static GraphDatabaseAPI dbAPI;
 
     @Procedure(name = "com.maxdemarzi.distinct_network_to_file_mt", mode = Mode.WRITE)
-    @Description("CALL com.jnj.distinct_network_to_file_mt(threads, file)")
+    @Description("CALL com.maxdemarzi.distinct_network_to_file_mt(threads, file)")
     public Stream<StringResult> DistinctNetworkToFileMultiThreaded(@Name("number") Number number, @Name("file") String file) throws InterruptedException {
         dbAPI = db;
         int threads = Math.min(Runtime.getRuntime().availableProcessors(), number.intValue());
