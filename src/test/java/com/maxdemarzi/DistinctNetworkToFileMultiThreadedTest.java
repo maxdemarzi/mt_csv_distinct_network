@@ -43,6 +43,7 @@ public class DistinctNetworkToFileMultiThreadedTest {
             "CREATE (c8:Location {name:'c8'})" +
             "CREATE (c9:Person {name:'c9'})" +
             "CREATE (c10:Person {name:'c10'})" +
+            "CREATE (c11:Person {name:'c11'})" +
             "CREATE (c1)-[:KNOWS]->(c2)" +
             "CREATE (c2)-[:KNOWS]->(c3)" +
             "CREATE (c3)-[:KNOWS]->(c4)" +
@@ -53,7 +54,8 @@ public class DistinctNetworkToFileMultiThreadedTest {
             "CREATE (c6)<-[:IS_IN]-(c7)" +
             "CREATE (c7)-[:LIVES_AT]->(c8)" +
             "CREATE (c8)<-[:LIVES_AT]-(c9)" +
-            "CREATE (c9)-[:KNOWS]->(c10)" ;
+            "CREATE (c9)-[:KNOWS]->(c10)" +
+            "CREATE (c11)-[:KNOWS]->(c10)" ;
 
 
     static String  getResultRow(HTTP.Response response) {
